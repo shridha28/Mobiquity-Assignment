@@ -8,7 +8,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.mobiquity.exception.APIException;
+import com.mobiquity.solution.Recursive;
 import com.mobiquity.utility.PackageParser;
+import com.mobiquity.utility.Utility;
 /**
  * This class is the main class to get the packages from a file, parse the packages and 
  * process them using KnapSack solution to find the packages having maximum price and
@@ -28,21 +30,17 @@ public class Packer {
 	 */
 	public static String pack(String filePath) throws APIException {
 
-		try {
-			Path path = Paths.get(filePath);
-			List<String> lines = Files.lines(path).collect(Collectors.toList());
+			List<String> lines = Utility.readFile(filePath);
+			
 			lines.forEach((s)->{
 				try {
 					PackageParser.parsePackage(s);
+					
 					
 				} catch (APIException e) {
 					e.printStackTrace();
 				}
 			});
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		} 
 		return null;
 	}
 

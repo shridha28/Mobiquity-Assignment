@@ -14,9 +14,9 @@ import com.mobiquity.beans.Package;
  * Concrete implementation of Profitable to return the most profit
  * pairs of weights and prices given the weight limit
  */
-public class Tabular implements Profitable {
+public class Tabular {
 
-	@Override
+
 	public void calculateProfit(int weightLimit, List<Package> packages) {
 	
 		List<Double> weights = packages
