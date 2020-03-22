@@ -5,20 +5,19 @@ package com.mobiquity.solution;
 
 import java.util.List;
 
-import com.mobiquity.beans.Package;
+import com.mobiquity.beans.Item;
 
 /**
- * @author acer
+ * @author Shridha Jalihal
  *
  */
 public interface Profitable {
-	
-	//public void calculateProfit(int weightLimit,List<Package> packages);
 
 	/**
 	 * @param weightLimit
-	 * @param packages
+	 * @param items of a package
+	 * @return String containing selected item indices
 	 */
-	void calculateProfit(double weightLimit, List<Package> packages);
+	String calculateProfit(double weightLimit, List<Item> packages);
 
 }

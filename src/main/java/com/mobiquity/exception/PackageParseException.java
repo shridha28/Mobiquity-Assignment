@@ -4,7 +4,8 @@
 package com.mobiquity.exception;
 
 /**
- * Exception thrown when a package is not parsed correctly
+ * Exception thrown when a package is not parsed correctly/
+ * the package is not valid
  * @author Shridha Jalihal
  **/
 public class PackageParseException extends APIException {

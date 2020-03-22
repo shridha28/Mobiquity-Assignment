@@ -20,7 +20,6 @@ import com.mobiquity.utility.Utility;
 
 public class UtilityTest {
 	
-	
 	public static final String VALID_FILE = "C:\\Users\\acer\\Desktop\\MyProject"
 			+ "\\Mobiquity Java assignment\\src\\main\\java\\com\\mobiquity\\packer\\sample.txt";
 	
@@ -52,9 +51,5 @@ public class UtilityTest {
 		 Assertions.assertEquals(0, list.size());
 	}
 	
-
-	boolean fileExists(String fileName) {
-		File file = new File(fileName);
-		return file.exists();
-	}
+	
 }

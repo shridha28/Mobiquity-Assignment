@@ -4,12 +4,15 @@
 package com.mobiquity.utility;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import com.mobiquity.beans.Item;
 import com.mobiquity.exception.APIException;
 import com.mobiquity.exception.PackageParseException;
-import com.mobiquity.solution.Recursive;
-import com.mobiquity.beans.Package;
+import com.mobiquity.solution.DynamicSolvable;
+import com.mobiquity.solution.RecursiveSolvable;
 
 /**
  * @author Shridha S Jalihal
@@ -21,54 +24,60 @@ public class PackageParser {
 	 * @param package of type String for Parsing
 	 * @return 
 	 */
-	public static void parsePackage(String s) throws APIException {
+	public static String parseAndProcessPackage(String s) throws APIException {
 
-		
-		
+		String valueItems = "";
 		if(!s.isBlank()) {
-			List<Package> packs = null;
+			List<Item> items = null;
 			
 			String splits[] =  s.split(":");
 			
 			if(splits.length==2) {
 				
-				String packages [] = splits[1].split(" ");
+				if(Double.valueOf(splits[0].trim())<0)
+				    throw new PackageParseException("Package limit cannot be negative");
+				
+				if(Double.valueOf(splits[0].trim())>100)
+					throw new PackageParseException("Package limit cannot exceed 100");
+				
+				String splitter [] = splits[1].split(" ");
 				 
-				if(packages.length>0) {
-					packs = new ArrayList<Package>();
+				if(splitter.length>0) {
+					items = new ArrayList<Item>();
 					
-					for(String pack: packages) {
+					for(String pack: splitter) {
 
 						  
 						if(!pack.isEmpty()) {
 							String sub = pack.substring(1,pack.length()-1);
 
-							packages = sub.split(",");
-							if(packages.length==3) {
+							splitter = sub.split(",");
+							if(splitter.length==3) {
 								
-								Package packTemp = new Package(
-										Integer.valueOf(packages[0]),
-										Double.valueOf(packages[1]),
-										Double.valueOf(packages[2].substring(1)));
+								Item packTemp = new Item(
+										Integer.valueOf(splitter[0]),
+										Double.valueOf(splitter[1]),
+										Double.valueOf(splitter[2].substring(1)));
 									    
-								packs.add(packTemp);
+								items.add(packTemp);
 							}
-							packs.sort((s1,s2)->Double.compare(s1.getPrice(),s2.getPrice()));
-							//System.out.println(packs+"\n");
+							
 						}
 					}
-
-					new Recursive().calculateProfit(Double.valueOf(splits[0].trim()), packs);
+					 /* Filter the items list to remove the invalid items whose weight or price is greater than 100*/
+					    items =  items.stream().filter((item)->(item.getPrice()<=100 &&
+					    		item.getWeight()<=100)).collect(Collectors.toList());
+					  Collections.sort(items);
+						valueItems = new DynamicSolvable().calculateProfit(Double.valueOf(splits[0].trim()), items);
 				}
-
 			}
-			System.out.println("************************************************************");
 		}
 
 		else {
 			throw new PackageParseException("The package is blank,cannot be parsed");
 		}
 		
+		return valueItems;
 		
 	}
 }
