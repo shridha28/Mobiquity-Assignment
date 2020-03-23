@@ -25,6 +25,7 @@ This solution contains two approaches to solve the problem which are
 Running the Program:
 
 In order to run the program, pass the items in below format. This should be placed in a text file
+
 Sample:
 
 81 : (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)
@@ -38,6 +39,9 @@ Sample:
 Expected output for the above input:
 
 4
+
 -
+
 2,7
+
 8,9
