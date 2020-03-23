@@ -2,8 +2,8 @@ com\mobiquity\beans\Item.class
 com\mobiquity\packer\Packer.class
 com\mobiquity\exception\APIException.class
 com\mobiquity\solution\Profitable.class
-com\mobiquity\utility\Utility.class
-com\mobiquity\solution\DynamicSolvable.class
 com\mobiquity\exception\PackageParseException.class
 com\mobiquity\utility\PackageParser.class
+com\mobiquity\utility\Utility.class
+com\mobiquity\solution\DynamicSolvable.class
 com\mobiquity\solution\RecursiveSolvable.class

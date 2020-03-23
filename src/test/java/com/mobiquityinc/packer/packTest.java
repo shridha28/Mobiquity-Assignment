@@ -15,27 +15,25 @@ import com.mobiquity.packer.Packer;
 import com.mobiquity.utility.PackageParser;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
+/**PackTest method to test the output of a file.
  * @author Shridha Jalihal
- *
- */
-public class packTest {
+ **/
+
+public class PackTest {
 	
 	
 	String validString = "2,7";
 	
 	
-	/**
-	 * Test to verify if the function returns valid output for the input file with all items
+	/**@throws APIException
+	 * Test to verify if the function returns valid output for the input file with all items.
 	 */
 	@Test
-	public void testPackageParser_input1() throws APIException {
+	public void testPackMethod() throws APIException {
 		
-		String filePath = "C:\\\\Users\\\\acer\\\\Desktop\\\\MyProject\\\\Mobiquity Java assignment\\\\src\\\\test\\\\java\\\\resources\\\\validInputFile.txt";
+		String filePath = "./src/main/java/sample.txt";
 					
-		validString="4\n-\n2,7\n8,9\n";
-		String txt = Packer.pack(filePath);
-		//RecursiveSolvable profitable = new RecursiveSolvable();
+		validString="8,9\n2,3,4,10\n1,2,5\n4\n-\n2,7\n";
 		assertEquals(validString, Packer.pack(filePath));
 	}
 	

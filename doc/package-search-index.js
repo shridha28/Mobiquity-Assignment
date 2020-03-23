@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.mobiquityinc.packer"}]
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.mobiquity.beans"},{"l":"com.mobiquity.exception"},{"l":"com.mobiquity.packer"},{"l":"com.mobiquity.solution"},{"l":"com.mobiquity.utility"},{"l":"com.mobiquityinc.packer"}]

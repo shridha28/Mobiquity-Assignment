@@ -1,0 +1,42 @@
+2020-03-23 19:00:12 DEBUG Packer:55 - Input file path:./src/main/java/sample.txt
+2020-03-23 19:00:12 DEBUG Packer:36 - Parsing for input:56 : (6,48.77,€79) (8,19.36,€79) (9,6.76,€64)
+2020-03-23 19:00:12 INFO  Packer:90 - Solving the package problem with the approach:RecursiveSolvable
+2020-03-23 19:00:12 DEBUG Packer:36 - Parsing for input:75 : (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55) (5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78) (10,14.55,€100)
+2020-03-23 19:00:12 INFO  Packer:90 - Solving the package problem with the approach:RecursiveSolvable
+2020-03-23 19:00:12 DEBUG Packer:36 - Parsing for input:8 : (1,2,€2) (2,2,€4) (3,9,€6) (4,5,€2) (5,3,€2)
+2020-03-23 19:00:12 INFO  Packer:90 - Solving the package problem with the approach:RecursiveSolvable
+2020-03-23 19:00:12 DEBUG Packer:36 - Parsing for input:81 : (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)
+2020-03-23 19:00:12 INFO  Packer:90 - Solving the package problem with the approach:RecursiveSolvable
+2020-03-23 19:00:12 DEBUG Packer:36 - Parsing for input:8 : (1,15.3,€34)
+2020-03-23 19:00:12 INFO  Packer:90 - Solving the package problem with the approach:RecursiveSolvable
+2020-03-23 19:00:12 DEBUG Packer:36 - Parsing for input:75 : (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55) (5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78)
+2020-03-23 19:00:12 INFO  Packer:90 - Solving the package problem with the approach:RecursiveSolvable
+2020-03-23 19:00:12 INFO  Packer:59 - Output after parsing package and applying logic:
+8,9
+2,3,4,10
+1,2,5
+4
+-
+2,7
+
+2020-03-23 19:01:03 DEBUG Packer:55 - Input file path:./src/main/java/sample.txt
+2020-03-23 19:01:03 DEBUG Packer:36 - Parsing for input:56 : (6,48.77,€79) (8,19.36,€79) (9,6.76,€64)
+2020-03-23 19:01:03 INFO  Packer:90 - Solving the package problem with the approach:DynamicSolvable
+2020-03-23 19:01:03 DEBUG Packer:36 - Parsing for input:75 : (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55) (5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78) (10,14.55,€100)
+2020-03-23 19:01:03 INFO  Packer:90 - Solving the package problem with the approach:DynamicSolvable
+2020-03-23 19:01:03 DEBUG Packer:36 - Parsing for input:8 : (1,2,€2) (2,2,€4) (3,9,€6) (4,5,€2) (5,3,€2)
+2020-03-23 19:01:03 INFO  Packer:90 - Solving the package problem with the approach:DynamicSolvable
+2020-03-23 19:01:03 DEBUG Packer:36 - Parsing for input:81 : (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)
+2020-03-23 19:01:03 INFO  Packer:90 - Solving the package problem with the approach:DynamicSolvable
+2020-03-23 19:01:03 DEBUG Packer:36 - Parsing for input:8 : (1,15.3,€34)
+2020-03-23 19:01:03 INFO  Packer:90 - Solving the package problem with the approach:DynamicSolvable
+2020-03-23 19:01:03 DEBUG Packer:36 - Parsing for input:75 : (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55) (5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78)
+2020-03-23 19:01:03 INFO  Packer:90 - Solving the package problem with the approach:DynamicSolvable
+2020-03-23 19:01:03 INFO  Packer:59 - Output after parsing package and applying logic:
+8,9
+2,3,4,10
+1,2,5
+4
+-
+2,7
+

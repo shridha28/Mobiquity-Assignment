@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.mobiquityinc.packer;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,10 +13,10 @@ import com.mobiquity.beans.Item;
 import com.mobiquity.solution.DynamicSolvable;
 import com.mobiquity.solution.Profitable;
 
-/**
+/**DynamicSolvableTest to test the Set method implementaton of the
+ * Packages Problem.
  * @author Shridha Jalihal
- *
- */
+ * */
 public class DynamicSolvableTest {
 	
 	//Variable used to validate index for the below tests
@@ -83,7 +81,7 @@ public class DynamicSolvableTest {
 	public void testRecursiveSolvable_input3() {
 		
 		double weightLimit = 75.0;
-		validIndex = "7,2";
+		validIndex = "2,7";
 		List<Item> packages = new ArrayList();
 		Item item1 = new Item(1,85.31,29);
 		packages.add(item1);
@@ -114,7 +112,7 @@ public class DynamicSolvableTest {
 	public void testRecursiveSolvable_input4() {
 		
 		double weightLimit = 56.0;
-		validIndex = "9,8";
+		validIndex = "8,9";
 		List<Item> packages = new ArrayList();
 		Item item1 = new Item(1,90.72,13);
 		packages.add(item1);

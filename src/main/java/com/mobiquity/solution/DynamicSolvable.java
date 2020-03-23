@@ -3,14 +3,13 @@
  */
 package com.mobiquity.solution;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
 import com.mobiquity.beans.Item;
+import com.mobiquity.utility.Utility;
 
 
 /**
@@ -28,8 +27,6 @@ public class DynamicSolvable implements Profitable {
 		Map<Integer,TreeSet<Item>> hashMap = new HashMap(); 
 		Item defItem = new Item(0,0.0,0.0);
 		
-		
-		//listOfItems.sort((s1,s2)->Double.compare(s, d2));
 		/*
 		 * Check if the items have decimal weights,
 		 * if yes then convert to rounded values
@@ -45,12 +42,9 @@ public class DynamicSolvable implements Profitable {
 
 		for(Item pack:listOfItems) {
 
+			
+			TreeSet<Item> set = new TreeSet<Item>(Utility.sortItemsForDynamic());
 			/* Add the default item to the set*/
-			TreeSet<Item> set = new TreeSet<Item>();/*
-													 * (s1,s2)->{ int c = Double.compare(s1.getPrice(),s2.getPrice());
-													 * if(c==0) return Double.compare(s2.getWeight(),s1.getWeight());
-													 * return c;} );
-													 */
 			set.add(defItem);
 			
 			/* for set size greater than 1*/
@@ -116,7 +110,7 @@ public class DynamicSolvable implements Profitable {
 					setIndex--;
 				}
 				else {
-					valPackIndices+=listOfItems.get(packIndex).getIndex()+",";
+					valPackIndices=listOfItems.get(packIndex).getIndex()+","+valPackIndices;
 					highest = new
 							Item(0,highest.getWeight()-listOfItems.get(packIndex).getWeight(),
 									highest.getPrice()-listOfItems.get(packIndex).getPrice());
@@ -126,7 +120,7 @@ public class DynamicSolvable implements Profitable {
 			
 			/* Include the first index,if its a part of valid indices*/
 			if(packIndex==0 && hashMap.get(setIndex).contains(highest)) {
-				valPackIndices+=listOfItems.get(packIndex).getIndex();
+				valPackIndices=listOfItems.get(packIndex).getIndex()+","+valPackIndices;
 			}
 		}
 

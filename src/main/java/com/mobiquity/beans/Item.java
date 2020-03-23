@@ -5,7 +5,7 @@ package com.mobiquity.beans;
  * @author Shridha S Jalihal
  * Item Bean to build a package.
  */
-public class Item implements Comparable<Item>{
+public class Item{
 
 	private	int index;
 	private	double weight;
@@ -62,11 +62,4 @@ public class Item implements Comparable<Item>{
 		return false;
 	}
 
-	@Override
-	public int compareTo(Item o) {
-		int c = Double.compare(this.getPrice(),o.getPrice());
-		if(c==0)
-			return Double.compare(o.getWeight(),this.getWeight());
-		return c;
-	}
 }

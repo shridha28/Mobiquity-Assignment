@@ -1,4 +1,5 @@
 com\mobiquityinc\packer\PackerParserTest.class
-com\mobiquityinc\packer\packTest.class
+com\mobiquityinc\packer\PackTest.class
+com\mobiquityinc\packer\RecursiveSolvableTest.class
 com\mobiquityinc\packer\DynamicSolvableTest.class
 com\mobiquityinc\packer\UtilityTest.class

@@ -13,8 +13,8 @@ public class PackageParseException extends APIException {
 	
 	private static final long serialVersionUID = 4657106205213850085L;
 
-	/**
-	 * @param message
+	/**Parametrized Constructor for PackageParseException
+	 * @param message message describing the reason for exception
 	 */
 	public PackageParseException(String message) {
 		super(message);

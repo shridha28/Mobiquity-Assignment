@@ -1,5 +1,8 @@
 Manifest-Version: 1.0
 Built-By: acer
-Build-Jdk: 1.8.0_231
+Build-Jdk: 11.0.6
+Class-Path: lib/log4j-1.2.17.jar lib/log4j-core-2.13.1.jar lib/log4j-api
+ -2.13.1.jar
+Main-Class: com.mobiquity.packer.Packer
 Created-By: Maven Integration for Eclipse
 
