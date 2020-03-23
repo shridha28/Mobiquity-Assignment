@@ -26,6 +26,7 @@ Running the Program:
 
 In order to run the program, pass the items in below format. This should be placed in a text file
 Sample:
+
 81 : (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)
 
 8 : (1,15.3,€34)
@@ -40,6 +41,3 @@ Expected output for the above input:
 -
 2,7
 8,9
-
-
-
